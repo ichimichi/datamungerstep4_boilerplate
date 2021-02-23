@@ -16,6 +16,8 @@ public class CsvQueryProcessor extends QueryProcessingEngine {
      */
     public CsvQueryProcessor(String fileName) throws FileNotFoundException {
         this.fileName = fileName;
+        String filePath = System.getProperty("user.dir") + "/" + fileName;
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(filePath)));
     }
 
     /*
